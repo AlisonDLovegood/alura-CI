@@ -20,9 +20,9 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: '1.22'
-
+    
     - name: start DB
-      run: docker-compose up -d postgres
+      run: docker compose up -d postgres
 
     - name: lint
       uses: golangci/golangci-lint-action@v6
