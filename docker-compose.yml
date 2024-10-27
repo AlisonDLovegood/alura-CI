@@ -1,6 +1,8 @@
 services:
   postgres:
     image: "postgres"
+    ports:
+      - 5432:5432
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
@@ -22,7 +24,7 @@ services:
     depends_on:
       - postgres
     environment:
-      - DB_HOST=postgres
+      - DB_HOST=localhost
       - DB_USER=root
       - DB_PSWD=root
       - DB_NAME=root
